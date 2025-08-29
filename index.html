@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Stok Reagen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📊 Dashboard Stok Reagen</h1>
+  </header>
+
+  <main>
+    <!-- Filter Kategori -->
+    <section class="filter">
+      <label for="kategori">Filter Kategori:</label>
+      <select id="kategori">
+        <option value="all">Semua</option>
+        <option value="hematologi">Hematologi</option>
+        <option value="mikrobiologi">Mikrobiologi</option>
+        <option value="kimia klinik">Kimia Klinik</option>
+        <option value="imunologi">Imunologi</option>
+        <option value="hormon">Hormon</option>
+        <option value="urinalisa">Urinalisa</option>
+        <option value="bhp medik">BHP Medik</option>
+        <option value="umum">Umum</option>
+      </select>
+    </section>
+
+    <!-- Form Tambah Reagen -->
+    <section class="form">
+      <h2>➕ Tambah Reagen</h2>
+      <form id="formReagen">
+        <input type="text" id="nama" placeholder="Nama Reagen" required>
+        <select id="kategoriReagen" required>
+          <option value="" disabled selected>Pilih Kategori</option>
+          <option value="hematologi">Hematologi</option>
+          <option value="mikrobiologi">Mikrobiologi</option>
+          <option value="kimia klinik">Kimia Klinik</option>
+          <option value="imunologi">Imunologi</option>
+          <option value="hormon">Hormon</option>
+          <option value="urinalisa">Urinalisa</option>
+          <option value="bhp medik">BHP Medik</option>
+          <option value="umum">Umum</option>
+        </select>
+        <input type="number" id="jumlah" placeholder="Jumlah" required>
+        <input type="date" id="tanggalMasuk" required>
+        <input type="date" id="tanggalKeluar">
+        <input type="date" id="expDate" required>
+        <button type="submit">Tambah</button>
+      </form>
+    </section>
+
+    <!-- Tabel Stok -->
+    <section class="tabel">
+      <h2>📦 Daftar Stok</h2>
+      <table id="tabelReagen">
+        <thead>
+          <tr>
+            <th>Nama Reagen</th>
+            <th>Kategori</th>
+            <th>Jumlah</th>
+            <th>Tgl Masuk</th>
+            <th>Tgl Keluar</th>
+            <th>Exp Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- data reagen muncul disini -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
